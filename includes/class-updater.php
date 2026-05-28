@@ -122,15 +122,15 @@ class CookieNod_Updater {
         $plugin_data = get_plugin_data($this->plugin_file);
 
         return array(
-            'Name'          => $plugin_data['Name'],
-            'PluginURI'     => $plugin_data['PluginURI'],
-            'Version'       => $plugin_data['Version'],
-            'Description'   => $plugin_data['Description'],
-            'Author'        => $plugin_data['Author'],
-            'AuthorURI'     => $plugin_data['AuthorURI'],
-            'TestedWP'      => $plugin_data['TestedWP'],
-            'RequiresWP'    => $plugin_data['RequiresWP'],
-            'RequiresPHP'   => $plugin_data['RequiresPHP'],
+            'Name'          => $plugin_data['Name'] ?? '',
+            'PluginURI'     => $plugin_data['PluginURI'] ?? '',
+            'Version'       => $plugin_data['Version'] ?? '',
+            'Description'   => $plugin_data['Description'] ?? '',
+            'Author'        => $plugin_data['Author'] ?? '',
+            'AuthorURI'     => $plugin_data['AuthorURI'] ?? '',
+            'TestedWP'      => $plugin_data['TestedWP'] ?? '',
+            'RequiresWP'    => $plugin_data['RequiresWP'] ?? '',
+            'RequiresPHP'   => $plugin_data['RequiresPHP'] ?? '',
         );
     }
 
