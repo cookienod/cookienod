@@ -54,6 +54,9 @@ class CookieNod_Updater {
                     'tested'      => $plugin_data['TestedWP'] ?? '',
                     'requires'    => $plugin_data['RequiresWP'] ?? '',
                     'requires_php'=> $plugin_data['RequiresPHP'] ?? '',
+                    'sections'    => array(
+                        'changelog' => $update_data->body ?? '',
+                    ),
                 );
             }
         }
@@ -104,6 +107,11 @@ class CookieNod_Updater {
             'tested'        => $plugin_data['TestedWP'],
             'requires_php'  => $plugin_data['RequiresPHP'],
             'compatibility' => (object) array(),
+            'sections'       => array(
+                'changelog'     => $update_data->body ?? '',
+                'description'   => $plugin_data['Description'],
+                'installation' => __('Install via WordPress admin or upload the zip file from GitHub releases.', 'cookienod'),
+            ),
         );
     }
 
