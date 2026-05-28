@@ -28,6 +28,7 @@ define('COOKIENOD_API_ENDPOINT', 'https://api.cookienod.com');
 
 // Load required files
 require_once COOKIENOD_PLUGIN_DIR . 'includes/class-core.php';
+require_once COOKIENOD_PLUGIN_DIR . 'includes/class-updater.php';
 
 /**
  * Initialize the plugin
@@ -37,6 +38,9 @@ require_once COOKIENOD_PLUGIN_DIR . 'includes/class-core.php';
 function cookienod_wp() {
     return CookieNod_Core::get_instance();
 }
+
+// Initialize GitHub updater
+new CookieNod_Updater(__FILE__, COOKIENOD_VERSION);
 
 // Start the plugin
 add_action('plugins_loaded', 'cookienod_wp');
