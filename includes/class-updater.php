@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 
 class CookieNod_Updater {
 
-    private $github_repo = 'cookienod/cookienod-wordpress';
+    private $github_repo = 'cookienod/cookienod';
     private $plugin_file;
     private $plugin_version;
     private $plugin_basename;
@@ -44,7 +44,7 @@ class CookieNod_Updater {
 
                 $transient->response[$this->plugin_basename] = (object) array(
                     'new_version' => ltrim($update_data->tag_name, 'v'),
-                    'slug'        => 'cookienod-wordpress',
+                    'slug'        => 'cookienod',
                     'plugin'      => $this->plugin_basename,
                     'url'         => $plugin_data['PluginURI'],
                     'package'     => $update_data->zipball_url ?? $update_data->assets[0]->browser_download_url ?? '',
@@ -82,7 +82,7 @@ class CookieNod_Updater {
             return $res;
         }
 
-        if (!isset($args->slug) || $args->slug !== 'cookienod-wordpress') {
+        if (!isset($args->slug) || $args->slug !== 'cookienod') {
             return $res;
         }
 
@@ -95,7 +95,7 @@ class CookieNod_Updater {
         $plugin_data = $this->get_plugin_data();
 
         return (object) array(
-            'slug'          => 'cookienod-wordpress',
+            'slug'          => 'cookienod',
             'name'          => $plugin_data['Name'],
             'new_version'   => ltrim($update_data->tag_name, 'v'),
             'version'       => ltrim($update_data->tag_name, 'v'),
