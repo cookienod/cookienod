@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
-define('COOKIENOD_VERSION', '1.0.0');
+define('COOKIENOD_VERSION', '1.0.1');
 define('COOKIENOD_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('COOKIENOD_PLUGIN_URL', plugin_dir_url(__FILE__));
 define('COOKIENOD_PLUGIN_FILE', __FILE__);
